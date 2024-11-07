@@ -11,4 +11,10 @@
 Результат выполнения программы: </br>
 ![image](https://github.com/user-attachments/assets/353a0fe2-e3ca-426e-a246-6777218668b7)
 
+# Задание 3
+Реализован интерфейс Account, а также имплементирующие его классы DebitAccount и CreditAccount.</br></br>
+Код задания находится в файле task3.ts.</br></br>
+Результат выполнение программы: </br>
+![Снимок экрана в 2024-11-07 14-49-07](https://github.com/user-attachments/assets/0fb9c096-3ea0-4299-9af2-29d5ed883ef3)
 
+![Снимок экрана в 2024-11-07 14-49-18](https://github.com/user-attachments/assets/fc3324cd-5709-46e8-937a-084850810a24)
