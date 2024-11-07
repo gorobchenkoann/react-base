@@ -66,12 +66,12 @@ class DebitAccount implements Account {
   }
 }
 
-const debitAccount = new DebitAccount('123456789');
-debitAccount.replenish(4000);
+const debitAccount = new DebitAccount('123456789'); // Создание дебетового счёта
+debitAccount.replenish(4000); // Пополнение баланса
 debitAccount.checkBalance();
-debitAccount.withdraw(5000);
-debitAccount.withdraw(-5000);
-debitAccount.withdraw(500);
+debitAccount.withdraw(5000); // Попытка снять сумму, которая больше, чем баланс
+debitAccount.withdraw(-5000); // Попытка снять отрицательную сумму
+debitAccount.withdraw(500); // Корректное пополнение баланса
 debitAccount.checkBalance();
 
 // Кредитный счет
@@ -128,13 +128,13 @@ class CreditAccount implements Account {
   }
 }
 
-const creditAccount = new CreditAccount('543219876', 120000);
-creditAccount.withdraw(40000);
+const creditAccount = new CreditAccount('543219876', 120000); // Создание кредитного счёта с лимитом 120000
+creditAccount.withdraw(40000); // Снятие со счёта
 creditAccount.checkBalance();
-creditAccount.withdraw(-40000);
-creditAccount.replenish(10000);
+creditAccount.withdraw(-40000); // Снятие отрицательной суммы
+creditAccount.replenish(10000); // Пополнение счёта
 creditAccount.checkBalance();
-creditAccount.replenish(30000);
+creditAccount.replenish(30000); // Пополнение до закрытия долга
 creditAccount.checkBalance();
 // --Классы, имплементирующие интерфейсы
 
