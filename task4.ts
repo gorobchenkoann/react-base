@@ -14,10 +14,6 @@ const getProductsInfo = (products: ICartProduct[]) => {
     console.log(`${prod.name} - ${prod.cost} - ${cartProduct.quantity}шт. - ${prod.cost * cartProduct.quantity}р.`);
   });
 }
-
-function addState<T>(state: T[], item: T) {
-  state.push(item);
-}
 //-- Helpers
 
 // Interfaces
@@ -64,8 +60,6 @@ type ProductParams = {
 
 type TNullable<T> = T | null | undefined;
 //-- Types
-
-// --State
 
 //Classes
 class Product implements IProduct {
@@ -246,11 +240,10 @@ class OrderManager {
 //-- Classes
 
 const CART_ID = 0;
-
-// Добавялем продукты в state
 const productManager = new ProductManager();
 const orderManager = new OrderManager();
 
+// Создаём продукты 
 productManager.addProduct(new Product({id: 1, name: 'Стол', description: 'Описание стола', cost: 3000, inStock: true}));
 productManager.addProduct(new Product({id: 2, name: 'Стул', description: 'Описание стула', cost: 2000, inStock: true}));
 productManager.addProduct(new Product({id: 3, name: 'Диван', description: 'Описание дивана', cost: 15000, inStock: false}));
